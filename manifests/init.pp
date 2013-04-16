@@ -38,6 +38,7 @@ class mongodb (
   $logpath         = '/var/log/mongo/mongod.log',
   $logappend       = true,
   $mongofork       = true,
+  $bind_ip         = undef,
   $port            = '27017',
   $dbpath          = '/var/lib/mongo',
   $nojournal       = undef,

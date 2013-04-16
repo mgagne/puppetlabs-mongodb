@@ -6,12 +6,15 @@ logappend=<%= logappend %>
 
 # fork and run in background
 fork = <%= mongofork %>
+<% if @bind_ip %>
+bind_ip = <%= bind_ip %>
+<% end %>
 port = <%= port %>
 dbpath= <%= dbpath %>
 
 <% if @nojournal %>
 # Disables write-ahead journaling
-nojournal = <%= nojournal %> 
+nojournal = <%= nojournal %>
 <% end %>
 <% if @cpu %>
 # Enables periodic logging of CPU utilization and I/O wait
